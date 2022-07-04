@@ -1,0 +1,30 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sexton Software</title><link>localhost/posts/</link><description>Recent content in Posts on Sexton Software</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 03 Jul 2022 16:16:14 -0400</lastBuildDate><atom:link href="localhost/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>The plan is simple...</title><link>localhost/posts/the-plan-is-simple/</link><pubDate>Sun, 03 Jul 2022 16:16:14 -0400</pubDate><guid>localhost/posts/the-plan-is-simple/</guid><description>I have decided I want to make a change in my life. I have always loved games and game development. I have been making games by myself and with friends for about 8 years now. My plan is pursue game development as more than just a hobby. I want to document that process here.
+Why do I care? I hope that by sharing my journey and process that I am able to help people who are interested in developing games as a career or as a hobby.</description><content type="html"><![CDATA[<p>I have decided I want to make a change in my life. I have always loved games
+and game development. I have been making games by myself and with
+friends for about 8 years now. My plan is pursue game development as more than
+just a hobby. I want to document that process here.</p>
+<h2 id="why-do-i-care">Why do I care?</h2>
+<p>I hope that by sharing my journey and process that I am able to help people who
+are interested in developing games as a career or as a hobby. I also hope that I
+can grow a community who enjoy discussing and making games together, and that
+this group can be a part of the larger game dev community.</p>
+<h2 id="who-are-you">Who are you?</h2>
+<p>I&rsquo;m Eric Sexton. I&rsquo;m originally a self taught programmer who earned a BS in
+Computer Science at Purdue University Fort Wayne. I worked all through college,
+which is added up to 4 years of professional web development experience.
+I obviously enjoy video games, but I also like to dabble in cooking and mixing
+drinks.</p>
+<h2 id="what-are-you-going-to-be-documenting">What are you going to be documenting?</h2>
+<p>The main thing I will be documenting at the start will be work on my personal
+projects. I&rsquo;m currently in the middle of trying to fully release a game I made
+during a game jam with a group of friends. I also hope to document game jams I
+do. I&rsquo;m interested in maybe streaming or video documenting my game jams since
+so much happens in a couple of days, so look at for that. On top of that, I my
+dream is to run my own indie studio so hopefully I can document that road to
+chasing that goal.</p>
+<h2 id="when--where-should-i-look-for-stuff">When / Where should I look for stuff?</h2>
+<p>Obviously, this website is a good place. My goal is to start with weekly dev logs
+on this website, and then as I get comfortable, I want to try different types of
+content like video and streaming. I will announce if and when those things are
+coming.</p>
+]]></content></item></channel></rss>
