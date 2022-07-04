@@ -1,4 +1,294 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sexton Software</title><link>https://sextonsoftware.dev/posts/</link><description>Recent content in Posts on Sexton Software</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 03 Jul 2022 16:16:14 -0400</lastBuildDate><atom:link href="https://sextonsoftware.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>The plan is simple...</title><link>https://sextonsoftware.dev/posts/the-plan-is-simple/</link><pubDate>Sun, 03 Jul 2022 16:16:14 -0400</pubDate><guid>https://sextonsoftware.dev/posts/the-plan-is-simple/</guid><description>I have decided I want to make a change in my life. I have always loved games and game development. I have been making games by myself and with friends for about 8 years now. My plan is pursue game development as more than just a hobby. I want to document that process here.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sexton Software</title><link>https://sextonsoftware.dev/posts/</link><description>Recent content in Posts on Sexton Software</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Mon, 04 Jul 2022 10:00:00 -0400</lastBuildDate><atom:link href="https://sextonsoftware.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create and Host A Blog Site for Free</title><link>https://sextonsoftware.dev/posts/how-i-created-my-website/</link><pubDate>Mon, 04 Jul 2022 10:00:00 -0400</pubDate><guid>https://sextonsoftware.dev/posts/how-i-created-my-website/</guid><description>If you have some development skills, and are looking to create a blog site for free, this is the place for you. I am going to walk through the steps I took to create my blog site. We are going to create this blog site using the static site generator Hugo and then host it on github pages.
+I know this site is mostly to document my game developer journey, but I think this is a good thing to know for game developers and plus, I learned so I want to share it.</description><content type="html"><![CDATA[<p>If you have some development skills, and are looking to create a blog site
+for free, this is the place for you. I am going to walk through the steps I took
+to create my blog site. We are going to create this blog site using the static
+site generator Hugo and then host it on github pages.</p>
+<p>I know this site is mostly to document my game developer journey, but I think
+this is a good thing to know for game developers and plus, I learned so I want
+to share it.</p>
+<h2 id="0-prerequisites">0. Prerequisites</h2>
+<ol>
+<li>A Github account and basic experience using git.</li>
+<li>An understanding of how to add a program to path on your operating system or
+knowledge on how to use your OS&rsquo;s package manager.</li>
+<li>Some kind of code or text editor software.</li>
+</ol>
+<h2 id="1-install-hugo">1. Install Hugo</h2>
+<p>There are a few methods for installing Hugo on your machine. Probably the best
+solution is using homebrew, as it requires the least setup. If you do not have
+homebrew, then you can download a binary of Hugo from github releases and add
+the binary to your system path. See the link down below for more details.</p>
+<ul>
+<li><a  href="https://gohugo.io/getting-started/installing/" target="_blank" rel="noopener noreferrer" >How To Install Hugo</a>
+</li>
+<li><a  href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/" target="_blank" rel="noopener noreferrer" >How to Add Binary to Path To Windows</a>
+</li>
+<li><a  href="https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/" target="_blank" rel="noopener noreferrer" >How to Add Binary to Path to MacOS</a>
+</li>
+</ul>
+<h3 id="install-hugo-windows-by-mike-dane">Install Hugo Windows by Mike Dane</h3>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/G7umPCU-8xc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h3 id="install-hugo-macos-by-mike-dane">Install Hugo MacOS by Mike Dane</h3>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/WvhCGlLcrF8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="2-create-hugo-project">2. Create Hugo Project</h2>
+<p>Next we need to create a new project. Open your command line and navigate to the
+directory you want to create the project directory in. Then run this command.
+<strong>Make sure to replace &lt;project-name&gt; with whatever you want to call your project.</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo new site &lt;project-name&gt;
+</span></span></code></pre></div><p>This command will create a new directory in the current directory. To enter the
+project from the command line, run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd &lt;project-name&gt;
+</span></span></code></pre></div><p>Now that you are in the project directory, run the following command
+to initialize this project as a git project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git init
+</span></span></code></pre></div><p>Finally, add a file named <code>.gitignore</code> to the project directory. This file will be used to
+ignore files that you do not want to include in the project. Paste the following
+text into the file.</p>
+<pre tabindex="0"><code># Generated files by hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Temporary lock file while building
+/.hugo_build.lock
+</code></pre><h2 id="3-adding-a-theme">3. Adding a theme</h2>
+<p>Now we need to add a theme to the site. If you don&rsquo;t plan to modify the src code
+for the theme to much, the best option is to add it as a git submodule (that way you can
+get updates for the theme down the line with one command). A lot of themes will
+have commands to add the theme as a submodule. There is a list of themes on <a  href="https://themes.gohugo.io/" target="_blank" rel="noopener noreferrer" >Hugo&#39;s websites</a>
+. For my
+website, I am using the <a  href="https://themes.gohugo.io/themes/hugo-theme-hello-friend-ng/" target="_blank" rel="noopener noreferrer" >hello-friend-ng theme</a>
+
+by <a  href="https://atlialp.com/" target="_blank" rel="noopener noreferrer" >Djordje Atlialp</a>
+. I
+am going to walk through how I added that to my site.</p>
+<p>Once in the project directory, run the following command to add the theme as a
+submodule.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+</span></span></code></pre></div><p>You will find a <strong>config.toml</strong> in your project directory. Open that in your
+preferred text editor and paste the following defaults for the theme.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseurl</span>      = <span style="color:#e6db74">&#34;localhost&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span>        = <span style="color:#e6db74">&#34;My Blog&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;en-us&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span>        = <span style="color:#e6db74">&#34;hello-friend-ng&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">paginate</span>     = <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dateform</span>        = <span style="color:#e6db74">&#34;Jan 2, 2006&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dateformShort</span>   = <span style="color:#e6db74">&#34;Jan 2&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dateformNum</span>     = <span style="color:#e6db74">&#34;2006-01-02&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dateformNumTime</span> = <span style="color:#e6db74">&#34;2006-01-02 15:04&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Subtitle for home</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">homeSubtitle</span> = <span style="color:#e6db74">&#34;A simple and beautiful blog&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Set disableReadOtherPosts to true in order to hide the links to other posts.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableReadOtherPosts</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Enable sharing buttons, if you like</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">enableSharingButtons</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Metadata mostly used in document&#39;s head</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;My new homepage or blog&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">keywords</span> = <span style="color:#e6db74">&#34;homepage, blog&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">images</span> = [<span style="color:#e6db74">&#34;&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">taxonomies</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">category</span> = <span style="color:#e6db74">&#34;blog&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tag</span>      = <span style="color:#e6db74">&#34;tags&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">series</span>   = <span style="color:#e6db74">&#34;series&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">languages</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Hello Friend NG&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">subtitle</span> = <span style="color:#e6db74">&#34;A simple theme for Hugo&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">keywords</span> = <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">copyright</span> = <span style="color:#e6db74">&#39;&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">readOtherPosts</span> = <span style="color:#e6db74">&#34;Read other posts&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">logo</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">logoText</span> = <span style="color:#e6db74">&#34;hello friend ng&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">logoHomeLink</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># or</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># path = &#34;/img/your-example-logo.svg&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># alt = &#34;Your example logo alt text&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># And you can even create generic menu</span>
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;blog&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>       = <span style="color:#e6db74">&#34;Blog&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span>        = <span style="color:#e6db74">&#34;/posts&#34;</span>
+</span></span></code></pre></div><p>If you are using a different theme, follow the setup instructions for that theme.</p>
+<h2 id="4-adding-content">4. Adding Content</h2>
+<p>Finally, the part we have been waiting for, we get to create content. To create
+new content with all the  necessary meta tags we will use the <code>hugo new</code>
+command. To create a new blog post. Run the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo new posts/my-first-post.md
+</span></span></code></pre></div><p>Now if you open that new content file in a text editor, located at
+<code>&lt;project-dir&gt;/content/posts/my-first-post.md</code>, you will see something like
+this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;My First Blog Post&#34;
+</span></span><span style="display:flex;"><span>date: 2022-07-04T09:24:14-04:00
+</span></span><span style="display:flex;"><span>draft: true
+</span></span><span style="display:flex;"><span>toc: false
+</span></span><span style="display:flex;"><span>images:
+</span></span><span style="display:flex;"><span>tags:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> untagged
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>Don&rsquo;t worry if you don&rsquo;t have all of this, some themes add different meta tags
+to posts. The important part is that at the top of your file you have a block of
+text surrounded with <code>---</code>. Right under this block you can just start typing.
+All of the content is made in markdown while allows you to do simple styling.
+Here is a <a  href="https://www.markdownguide.org/cheat-sheet/" target="_blank" rel="noopener noreferrer" >Markdown Cheatsheet</a>
+
+get you starter.</p>
+<p>An example of a page might look something like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;My First Blog Post&#34;
+</span></span><span style="display:flex;"><span>date: 2022-07-04T09:24:14-04:00
+</span></span><span style="display:flex;"><span>draft: true
+</span></span><span style="display:flex;"><span>toc: false
+</span></span><span style="display:flex;"><span>images:
+</span></span><span style="display:flex;"><span>tags:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> untagged
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Hello this is my first blog posts. I just wanted to say hi.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Who Am I?
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Im the guy who created this blog.
+</span></span></code></pre></div><h2 id="5-start-the-hugo-server">5. Start the Hugo Server</h2>
+<p>Now that we have our blog site, we need to start the server. To do this, we
+will run the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><p>Hugo server starts a server running on our local machine. The -D flag will
+include draft content in the site for preview. In your command line, after
+running that command, you should see a line that looks like this:</p>
+<pre tabindex="0"><code>Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+</code></pre><p>This means that you can go to <code>http://localhost:1313/</code> in your browser to see your
+site. You can make changes to the content and see the changes immediately.</p>
+<h2 id="6-create-a-repository-on-github">6. Create a Repository on Github</h2>
+<p>Now that we have a site, we need to create a repository on Github. This is
+where you will be able to share your site with the world. To create a new repo
+on github, you will need an account at <code>https://github.com</code>. Once you are signed
+in you will be able to click the plus icon in the top right corner of the
+screen and select <code>New Repository</code>. From there, you you can name your repo and
+select the <code>Public</code> option. Leave everything else default or blank.</p>
+<p>Now we need to push or local project to the github repository. To do this,
+we will run the following commands in the project directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+</span></span><span style="display:flex;"><span>git remote add origin git@github.com:&lt;username&gt;/&lt;repo-name&gt;.git
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><p>This command will stage all of the changed files, commit them to the default
+branch, add a remote origin for the project, set default branch&rsquo;s name to main
+and push the main branch to the github repository.</p>
+<h2 id="7-deploy-to-github-pages">7. Deploy to Github Pages</h2>
+<p>Now that we have a repository on Github, we need to deploy it to Github Pages. To do
+this we need to setup a <a  href="https://docs.github.com/en/actions/using-workflows" target="_blank" rel="noopener noreferrer" >github actions workflow.</a>
+
+Don&rsquo;t worry if you don&rsquo;t know exactly what this is. It is just a way to to automatic
+build and deploy our website to github pages when we push our content to github.
+To setup a workflow up, create a new directory called <code>.github</code> in the project directory.
+Then in the <code>.github</code> directory, create a new directory called <code>workflows</code>. Then,
+create a new workflow file called <code>main.yml</code>. In that file, paste the following.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">CI</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-18.04</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Git checkout</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Update theme</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># (Optional)If you have the theme added as submodule, you can pull it and use the most updated version</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">git submodule update --init --recursive</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#34;0.101.0&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># remove --minify tag if you do not need it</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># docs: https://gohugo.io/hugo-pipes/minification/</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_branch</span>: <span style="color:#ae81ff">gh-pages</span>
+</span></span></code></pre></div><p>What this action does is, on push to the main branch, checkout the code, pull the theme,
+install hugo in the action container, build the project, and deploy the built site to
+a new branch called gh-pages.</p>
+<p>Next you need to set the base url for your site. This is the url that will be
+used to access your site. If you are not going to buy a domain and set it up for
+this, then the baseurl will be <code>https://&lt;username&gt;.github.io/&lt;repo-name&gt;</code>. If you
+do use a custom domain, then you can set the baseurl to <code>https://&lt;domain-name&gt;</code>.
+To set the base url, open the <code>config.toml</code> file in the project directory and set
+the baseurl to the domain you will be using.</p>
+<p>After this is added, you can run the following command to push your code to github.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Added Automatic Deployment&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><h2 id="8-setup-github-pages-on-repository">8. Setup Github Pages on Repository</h2>
+<p>The last thing we need to do is to setup Github Pages on our repository. To do this,
+we will need to go the repository settings page. You can find this on your Github
+repository page by clicking the gear icon in the nav bar. Its the button farthest
+to the right. Once in the settings page, you can click the <code>Pages</code> tab in the left
+side nav. From there, under &ldquo;Source&rdquo; section, you can select the
+<code>gh-pages</code> branch and leave the folder set to <code>/(root)</code>.</p>
+<h2 id="9-the-future--references">9. The Future / References</h2>
+<p>You can now see your site in Github Pages. To add more content to your site, follow
+the steps above for adding content and then to deploy it to Github Pages. Run the following
+commands.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Content Update Message/Label&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><p>Also if its easier for you to edit this files in the browser, you can press <code>.</code>
+while on the github repository page and you will be able to edit files there.</p>
+<p>If you are interested in going
+further with any of the topics above, or are looking for other references,
+you can check out the following links.</p>
+<ul>
+<li><a  href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreferrer" >Hugo Quick Start</a>
+</li>
+<li><a  href="https://docs.github.com/en/actions/quickstart" target="_blank" rel="noopener noreferrer" >Github Actions Quick Start</a>
+</li>
+<li><a  href="https://gohugo.io/content-management/shortcodes/" target="_blank" rel="noopener noreferrer" >HTML Shortcodes for Hugo</a>
+</li>
+<li><a  href="https://bwaycer.github.io/hugo_tutorial.hugo/themes/customizing/" target="_blank" rel="noopener noreferrer" >Customizing Hugo Themes</a>
+</li>
+<li><a  href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site" target="_blank" rel="noopener noreferrer" >Custom Domain for Github Pages</a>
+</li>
+<li><a  href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener noreferrer" >Deploy Github Pages Action</a>
+</li>
+</ul>
+]]></content></item><item><title>The plan is simple...</title><link>https://sextonsoftware.dev/posts/the-plan-is-simple/</link><pubDate>Sun, 03 Jul 2022 16:16:14 -0400</pubDate><guid>https://sextonsoftware.dev/posts/the-plan-is-simple/</guid><description>I have decided I want to make a change in my life. I have always loved games and game development. I have been making games by myself and with friends for about 8 years now. My plan is pursue game development as more than just a hobby. I want to document that process here.
 Why do I care? I hope that by sharing my journey and process that I am able to help people who are interested in developing games as a career or as a hobby.</description><content type="html"><![CDATA[<p>I have decided I want to make a change in my life. I have always loved games
 and game development. I have been making games by myself and with
 friends for about 8 years now. My plan is pursue game development as more than
