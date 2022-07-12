@@ -1,4 +1,90 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sexton Software</title><link>https://sextonsoftware.dev/posts/</link><description>Recent content in Posts on Sexton Software</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Mon, 04 Jul 2022 10:00:00 -0400</lastBuildDate><atom:link href="https://sextonsoftware.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create and Host A Blog Site for Free</title><link>https://sextonsoftware.dev/posts/how-i-created-my-website/</link><pubDate>Mon, 04 Jul 2022 10:00:00 -0400</pubDate><guid>https://sextonsoftware.dev/posts/how-i-created-my-website/</guid><description>If you have some development skills, and are looking to create a blog site for free, this is the place for you. I am going to walk through the steps I took to create my blog site. We are going to create this blog site using the static site generator Hugo and then host it on github pages.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sexton Software</title><link>https://foopis23-sextonsoftware-dev-src-77rpj6xgcp9jw-1313.githubpreview.dev/posts/</link><description>Recent content in Posts on Sexton Software</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Mon, 11 Jul 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://foopis23-sextonsoftware-dev-src-77rpj6xgcp9jw-1313.githubpreview.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Temple of Chaos Devlog 6/4/2022</title><link>https://foopis23-sextonsoftware-dev-src-77rpj6xgcp9jw-1313.githubpreview.dev/posts/toc-devlog-1/</link><pubDate>Mon, 11 Jul 2022 12:00:00 +0000</pubDate><guid>https://foopis23-sextonsoftware-dev-src-77rpj6xgcp9jw-1313.githubpreview.dev/posts/toc-devlog-1/</guid><description>The Plan I have been out of the project for a couple of weeks, so the first step is to figure out where I finished off and what is next. After investigating Github and Trello, I realized that I just finished updating the Unity Editor Version, updating the project to the Universal Render Pipeline, and updating to the new Unity Input System. I also did some general code clean up. I am going to stop there on cleanup and updating for now, and create a release as this point.</description><content type="html"><![CDATA[<h2 id="the-plan">The Plan</h2>
+<p>I have been out of the project for a couple of weeks, so the first step is to
+figure out where I finished off and what is next. After investigating Github and
+Trello, I realized that I just finished updating the Unity Editor Version,
+updating the project to the Universal Render Pipeline, and updating to
+the new Unity Input System. I also did some general code clean up. I am going to
+stop there on cleanup and updating for now, and create a release as this point.</p>
+<p>After creating this release, my plan is to start prototyping multiplayer into
+the game. I think playing this with friends will give it the same vibes as
+grinding COD Zombies or Risk of Rain 2 with the boys. Its the way I like to
+enjoy these types of games. Because of that, I want to make sure I design the game to be
+multiplayer friendly so that I don&rsquo;t push to far, and then realize that it would
+be to much to add multiplayer it in the future.  My hope is that this will take about 2
+weeks to finish with the current size of the game.My first step in setting up a
+multiplayer prototype is going to be getting the lobby screen working. I am
+going to be using Mirror and Steamworks Fizzy. This is my first time making a
+multiplayer game using steamworks. Fingers crossed that it goes smoothly.</p>
+<p>I have also decided to go closed source with the game moving forward. My hope is
+that I can eventually sell this game, and I don&rsquo;t want people compiling from
+source and redistrubuting. That said, my hope is that some amount of time after
+release I would like to release the source code for modding and port, etc. I will
+also keep the source code open source for what I have done up until this point.
+As I don&rsquo;t want to yank it down. Its just anything moving forward will not be
+publish to that repository.</p>
+<h2 id="daily-log">Daily Log</h2>
+<h3 id="monday">Monday</h3>
+<p>Did nothing. It was vacation day :-)</p>
+<h3 id="tuesday">Tuesday</h3>
+<p>Was feeling a little under the weather, so I took another day to myself.</p>
+<h3 id="wednesday">Wednesday</h3>
+<p>I wrote code off and on from 5pm to midnight. I was having trouble focusing. That
+said, I was able to implement a simple lobby system following this
+<a  href="https://youtu.be/7Eoc8U8TWa8" target="_blank" rel="noopener noreferrer" >Youtube Tutorial</a>
+
+made by <a  href="https://www.youtube.com/c/ZygerGFX" target="_blank" rel="noopener noreferrer" >Zyger</a>
+.
+I then got names and profile pictures to show up on the lobby screen. I still need
+to test if other people can join since I do not have 2 steam accounts. I&rsquo;m hoping
+to clean up the lobby UI and then move on to a ready up system tomorrow.</p>
+
+    <img src="/img/posts/toc-devlog-1/lobby.PNG"  alt="Lobby Screenshot"  class="left"  />
+
+
+<h3 id="thursday">Thursday</h3>
+<p>So I started today by cleaning up the UI elements I made yesterday. A lot of
+scaling issues and edge cases I tried to fix. I also added a multiplayer button to the
+game&rsquo;s existing main menu to take you to the multiplayer testing menu so now I
+can compile the game and send it to people for testing. Its around 9pm, I just
+ate dinner, and I&rsquo;m going to try to finish the ready up system before I got to bed.</p>
+
+    <img src="/img/posts/toc-devlog-1/main-menu.PNG"  alt="Main Menu with New Multiplayer Button"  class="left"  />
+
+
+<p>I got the ready up system working. It was easier than I thought now that I have
+a good foundation. I also took the time the style the UI to look more like the
+existing menu in the game. Its not final, but I had a little time and it made
+me feel like I got a win.</p>
+<p>
+    <img src="/img/posts/toc-devlog-1/nicer-multiplayer-menu.PNG"  alt="Styled Multiplayer Menu"  class="left"  />
+
+
+
+    <img src="/img/posts/toc-devlog-1/nicer-lobby-unready.PNG"  alt="Styled Lobby with Ready Up Button"  class="left"  />
+
+
+
+    <img src="/img/posts/toc-devlog-1/nicer-lobby-ready.PNG"  alt="Styled Lobby with Players Readied Up"  class="left"  />
+
+</p>
+<h3 id="friday">Friday</h3>
+<p>I went out with a friend from high school after work so I didn&rsquo;t work on the
+game.</p>
+<h3 id="saturday">Saturday</h3>
+<p>I spent the day preparing for my move that is coming up in the next month. No
+work this day.</p>
+<h3 id="sunday">Sunday</h3>
+<p>I spend the day with my Girlfriend, so no more work.</p>
+<h2 id="wrap-up">Wrap Up</h2>
+<p>Honestly, I was hope that I would be able to get a little more done this week. I don&rsquo;t think I will make my two week goal at this pace xD.
+That said, I&rsquo;m happy that I was able to get the lobby system up and working. I think that making any progress I can helps keep the project going.
+I hope next week that I can start working on porting the player movement to
+support multiplayer. After this, I want to see if I can still use the
+multiplayer movement to play the game single-player offline or if I need to have
+need to find a way to reuse code between multiplayer fps controller and
+single-player fps controller. I think that will take up most of next week,
+but maybe I can also start on projectiles as well.</p>
+]]></content></item><item><title>How to Create and Host A Blog Site for Free</title><link>https://foopis23-sextonsoftware-dev-src-77rpj6xgcp9jw-1313.githubpreview.dev/posts/how-i-created-my-website/</link><pubDate>Mon, 04 Jul 2022 10:00:00 -0400</pubDate><guid>https://foopis23-sextonsoftware-dev-src-77rpj6xgcp9jw-1313.githubpreview.dev/posts/how-i-created-my-website/</guid><description>If you have some development skills, and are looking to create a blog site for free, this is the place for you. I am going to walk through the steps I took to create my blog site. We are going to create this blog site using the static site generator Hugo and then host it on github pages.
 I know this site is mostly to document my game developer journey, but I think this is a good thing to know for game developers and plus, I learned so I want to share it.</description><content type="html"><![CDATA[<p>If you have some development skills, and are looking to create a blog site
 for free, this is the place for you. I am going to walk through the steps I took
 to create my blog site. We are going to create this blog site using the static
@@ -288,7 +374,7 @@ you can check out the following links.</p>
 <li><a  href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener noreferrer" >Deploy Github Pages Action</a>
 </li>
 </ul>
-]]></content></item><item><title>The plan is simple...</title><link>https://sextonsoftware.dev/posts/the-plan-is-simple/</link><pubDate>Sun, 03 Jul 2022 16:16:14 -0400</pubDate><guid>https://sextonsoftware.dev/posts/the-plan-is-simple/</guid><description>I have decided I want to make a change in my life. I have always loved games and game development. I have been making games by myself and with friends for about 8 years now. My plan is pursue game development as more than just a hobby. I want to document that process here.
+]]></content></item><item><title>The plan is simple...</title><link>https://foopis23-sextonsoftware-dev-src-77rpj6xgcp9jw-1313.githubpreview.dev/posts/the-plan-is-simple/</link><pubDate>Sun, 03 Jul 2022 16:16:14 -0400</pubDate><guid>https://foopis23-sextonsoftware-dev-src-77rpj6xgcp9jw-1313.githubpreview.dev/posts/the-plan-is-simple/</guid><description>I have decided I want to make a change in my life. I have always loved games and game development. I have been making games by myself and with friends for about 8 years now. My plan is pursue game development as more than just a hobby. I want to document that process here.
 Why do I care? I hope that by sharing my journey and process that I am able to help people who are interested in developing games as a career or as a hobby.</description><content type="html"><![CDATA[<p>I have decided I want to make a change in my life. I have always loved games
 and game development. I have been making games by myself and with
 friends for about 8 years now. My plan is pursue game development as more than
