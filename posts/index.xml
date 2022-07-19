@@ -1,4 +1,95 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sexton Software</title><link>https://sextonsoftware.dev/posts/</link><description>Recent content in Posts on Sexton Software</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Mon, 11 Jul 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://sextonsoftware.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Temple of Chaos Devlog 1</title><link>https://sextonsoftware.dev/posts/toc-devlog-1/</link><pubDate>Mon, 11 Jul 2022 12:00:00 +0000</pubDate><guid>https://sextonsoftware.dev/posts/toc-devlog-1/</guid><description>The Plan I have been out of the project for a couple of weeks, so the first step is to figure out where I finished off and what is next. After investigating Github and Trello, I realized that I just finished updating the Unity Editor Version, updating the project to the Universal Render Pipeline, and updating to the new Unity Input System. I also did some general code clean up. I am going to stop there on cleanup and updating for now, and create a release as this point.</description><content type="html"><![CDATA[<h2 id="the-plan">The Plan</h2>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sexton Software</title><link>https://sextonsoftware.dev/posts/</link><description>Recent content in Posts on Sexton Software</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Mon, 18 Jul 2022 21:35:09 -0400</lastBuildDate><atom:link href="https://sextonsoftware.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Temple of Chaos Devlog 2</title><link>https://sextonsoftware.dev/posts/toc-devlog-2/</link><pubDate>Mon, 18 Jul 2022 21:35:09 -0400</pubDate><guid>https://sextonsoftware.dev/posts/toc-devlog-2/</guid><description>The Plan In last week&amp;rsquo;s devlog, I was able to add a multiplayer menu, lobby, and ready up system to my old game jam project, Temple of Chaos. This week, I would like to continue adding multiplayer to the game. I am going to be using Mirror and Steamworks Fizzy. Like I said last time, this is my first time making a multiplayer game with steamworks, so a lot of this is a learning experience.</description><content type="html"><![CDATA[<h2 id="the-plan">The Plan</h2>
+<p>In last week&rsquo;s devlog, I was able to add a multiplayer menu, lobby, and ready up
+system to my old game jam project, Temple of Chaos. This week, I would like to continue
+adding multiplayer to the game. I am going to be using Mirror and Steamworks Fizzy.
+Like I said last time, this is my first time making a multiplayer game with steamworks,
+so a lot of this is a learning experience. The plan is that I&rsquo;m going to try to
+get player movement synced over the network, after that I&rsquo;m going to start looking
+into how single-player works in am multiplayer game to see if I can reuse my multiplayer code.
+If I have time, I am going to try to get to get projectiles to sync of the network.</p>
+<h2 id="daily-log">Daily Log</h2>
+<h3 id="monday">Monday</h3>
+<p>Today, I had to stay late at work to get some stuff done for an upcoming deadline.
+When I got home, I decided to take a bit of a mental break by laying down and watching
+some youtube. Once I was feeling a bit better, I got up and finished up the devlog from
+last week and then made some edits to the website. Its quite late now, but I&rsquo;m going
+to try to start working on player movement.</p>
+<p>I took my awhile to figure out how I was going to spawn the players and get them
+into the next scene. I ended up overriding the change scene method in the network
+manager to destroy the objects that I was using as player objects in the lobby
+and spawn new player objects for the in game players. After this I had to strip
+down my existing player prefab to be only player movement because changing the
+player movement script to a duplicate script that adds the necessary logic
+for multiplayer broke other scripts attached to the player. High coupling and low
+cohesion in a dream. I think its working, but I realized I need to make a new steam
+account and setup the project on my laptop if I want to test it. So I&rsquo;m going to
+bed.</p>
+<h3 id="tuesday">Tuesday</h3>
+<p>I woke up and had a nice cup of coffee. I got up and started working on testing&hellip;
+Just kidding :). After I a late night of programming, I woke up late for work.
+Luckily its not a huge deal if I&rsquo;m a little bit late to my current job. Also, I know
+this isn&rsquo;t like the glamorous, I just really love game dev and programming log
+right now but I figure its best to just be authenticate. I&rsquo;m tired and sometimes
+programming makes me feel like I have no idea what I&rsquo;m doing even after
+year of experience and a degree.</p>
+<p>That said, I was talking with Jamac, the other developer that worked on the game
+jam version of the game with me, about the progress I was making on the project
+and it really lifted my spirits. He said he could hop on a call to help me test
+once we both got home from work. It didn&rsquo;t work. There were a lot of bugs. My
+plan is to setup my laptop for testing the project, and then I&rsquo;m going to iron
+out all of the bugs so that I can see if player movement is working or not.</p>
+<p>I finally got the loading into the test multiplayer scene and network synced
+player movement working. It was most just a lot of configuring and then some
+small code changes.</p>
+<p>Here is a clip of spawning into the multiplayer test scene
+and moving around. I only have the video from desktop player&rsquo;s perspective but
+the other player is the game running on my laptop. I also made these little capsule
+models so we can see the other players moving around.
+<video controls>
+	<source  src="/videos/posts/toc-devlog-2/movement-test.mp4"    type="video/mp4" > 
+</video>
+</p>
+<p>There is still a small bug where it looks like a player joins a lobby twice or
+something&hellip; Its not game breaking but it does throw an error and cause the
+editor to pause. I&rsquo;m going to try to work that out.</p>
+<h2 id="wednesday">Wednesday</h2>
+<p>I wasn&rsquo;t keep up with my devlog, so this is future me say&hellip; I&rsquo;m not exactly sure
+what I did this day. I think I took a break because I was a bit tired from work.</p>
+<p>Side note, I did start working on a portfolio section of the site during my lunch break. Hopefully
+I can add that soon to display my work in one place.</p>
+<h2 id="thursday">Thursday</h2>
+<p>I worked on making interfaces for a lot of the original scripts in the game. Some
+of the singleplayer code is reusable, but I it references code that I had to rewrote for
+multiplayer, so I hade to make interfaces for almost everything I referenced. This
+was all in the hope of getting projectiles working in the multiplayer scene.</p>
+<p>Also, at some point in this process I decided that I wanted to import the existing
+lighting and level geometry into the multiplayer scene. I think this was mostly
+because I needed a motivation boost after writing all of these interfaces and
+having no progress to visual show for it. Here is what that looks like</p>
+<video controls>
+	<source  src="/videos/posts/toc-devlog-2/multiplayer-level-update.mp4"    type="video/mp4" > 
+</video>
+
+<h2 id="friday">Friday</h2>
+<p>I decided to participate in the GMTK 2022 Game Jam so Temple of Chaos went on
+pause for the weekend. I&rsquo;m going to talk about my experience with the jam here because
+I don&rsquo;t think I have enough to say about for merit its own post. I worked with
+Jamac (James Dumas) and Josh Hovis on this game. James was the main programmer,
+Josh was the artist, and I was the sort of guy who did a lot of the levels, the
+menu systems, and I did decent amount of programming try my best to avoid conflicting
+with Jamac. Our game was a dice rolling puzzle game sort of inspired by bloxorz.
+It was a lot of fun, just like game jams in the past, though I was a little sad
+because on of our teammates had covid, we we had to do it from home instead of
+meeting up a central location. As always, it left me exhausted on Sunday and that
+carried into Monday. That said we did a pretty good job on getting sleep, I just
+think having your brain fire on all clinders for 16+ hours a day is a lot. I will
+leave a link to our game here.</p>
+<iframe frameborder="0" src="https://itch.io/embed/1618688?dark=true" width="552" height="167"><a href="https://foopis23.itch.io/tiles-and-dice">Tiles and Dice by Eric Sexton, Jamac, Josh</a></iframe>
+<h2 id="saturday">Saturday</h2>
+<p>Game Jam.</p>
+<h2 id="sunday">Sunday</h2>
+<p>Game Jam and nap time after the game jam ended.</p>
+]]></content></item><item><title>Temple of Chaos Devlog 1</title><link>https://sextonsoftware.dev/posts/toc-devlog-1/</link><pubDate>Mon, 11 Jul 2022 12:00:00 +0000</pubDate><guid>https://sextonsoftware.dev/posts/toc-devlog-1/</guid><description>The Plan I have been out of the project for a couple of weeks, so the first step is to figure out where I finished off and what is next. After investigating Github and Trello, I realized that I just finished updating the Unity Editor Version, updating the project to the Universal Render Pipeline, and updating to the new Unity Input System. I also did some general code clean up. I am going to stop there on cleanup and updating for now, and create a release as this point.</description><content type="html"><![CDATA[<h2 id="the-plan">The Plan</h2>
 <p>I have been out of the project for a couple of weeks, so the first step is to
 figure out where I finished off and what is next. After investigating Github and
 Trello, I realized that I just finished updating the Unity Editor Version,

@@ -2,3 +2,8 @@
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
+
+video {
+	max-width: 100%;
+	width: 100%;;
+}
